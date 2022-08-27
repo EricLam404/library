@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href = "style.css">
+    <script src=javascript.js defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="library">Library</div>
+    </div>
+
+    <div class="container">
+    </div>
+    
+    <button class="btn add" onclick="openForm()">Add Book</button>
+
+    <div class="form-popup">
+      <form class="form-container">
+        <div class="book">Add a Book</div>
+        <label for="title">Book Title</label>
+        <input type="text" placeholder="Enter book title" name="title" required>
+
+        <label for="author">Book Author</label>
+        <input type="text" placeholder="Enter book author" name="author" required>
+
+        <label for="pages">Pages</label>
+        <input type="number" placeholder="Enter total pages" name="pages" min="1" required>
+
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn" onclick="closeForm()">Add Book</button>
+      </form>
+
+    </div>
+  </body>
+</html>
