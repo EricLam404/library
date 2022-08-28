@@ -17,7 +17,7 @@
     <button class="btn add" onclick="openForm()">Add Book</button>
 
     <div class="form-popup">
-      <form class="form-container">
+      <form class="form-container" id="add-book-form">
         <div class="book">Add a Book</div>
         <label for="title">Book Title</label>
         <input type="text" placeholder="Enter book title" name="title" required>
@@ -29,7 +29,7 @@
         <input type="number" placeholder="Enter total pages" name="pages" min="1" required>
 
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        <button type="submit" class="btn" onclick="closeForm()">Add Book</button>
+        <button type="submit" class="btn">Add Book</button>
       </form>
 
     </div>
