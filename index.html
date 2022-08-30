@@ -28,8 +28,10 @@
         <label for="pages">Pages</label>
         <input type="number" placeholder="Enter total pages" name="pages" min="1" required>
 
-        <input type="checkbox" id="read" name="read">
-        <label for="read"> Is read?</label>
+        <div class="read-container">
+          <input type="checkbox" id="read" name="read">
+          <label for="read"> Is read?</label>
+        </div>
 
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         <button type="submit" class="btn">Add Book</button>
