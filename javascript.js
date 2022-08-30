@@ -31,7 +31,7 @@ function Book(name, author, pages, isRead) {
   this.author = author;
   this.pages = pages;
   this.isRead = isRead;
-  
+  this.num = myLibrary.length;
 }
 
 
@@ -50,10 +50,16 @@ function displayBooks(){
       let name = document.createElement("div");
       let author = document.createElement("div");
       let pages = document.createElement("div");
+      let button = document.createElement("button");
 
       let readContainer = document.createElement("div");
       let readName = document.createElement("div");
       let read = document.createElement("input");
+      
+      button.textContent = "Remove";
+      button.classList.add("remove");
+      button.classList.add(myLibrary[i].num);
+      button.addEventListener("click", removeBook);
       
       read.type = "checkbox";
       read.checked = myLibrary[i].isRead;
@@ -71,6 +77,7 @@ function displayBooks(){
       card.appendChild(author);
       card.appendChild(pages);
       card.appendChild(readContainer);
+      card.appendChild(button);
 
       card.classList.add("card");
       container.appendChild(card);
@@ -80,7 +87,24 @@ function displayBooks(){
   
 }
 
-function removeAllChildNodes(parent) {
+function removeBook(e){
+  let classList = e.target.classList.value;
+  let classes = classList.split(" ");
+  let num = classes[1];
+  myLibrary.splice(num, num + 1);
+  console.log(num);
+  updateNum();
+  displayBooks();
+}
+
+function updateNum(){
+  for(let i = 0; i < myLibrary.length; i++){
+    myLibrary[i].num = i;
+  }
+}
+
+
+function removeAllChildNodes(parent){
   while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
   }

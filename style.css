@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -55,7 +63,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 3px solid black;
+    border: 1px solid black;
     background-color: white;
     padding: 15px;
 }
@@ -91,11 +99,16 @@ body{
     color: white;
 }
   
-.form-container .cancel {
-    background-color: red;
+.form-container .cancel, .remove{
+    background-color: #ff9c9c;
 }
 
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
 }
-  
+
+button {
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+}
